@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditBookActivity">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="NEW BOOK"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:background="@color/colorPrimario"
+        android:padding="16dp"
+        android:fontFamily="@font/julius_sans_one_regular"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Contenedor de formulario -->
+    <LinearLayout
+        android:id="@+id/formContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/form_border"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        app:layout_constraintBottom_toTopOf="@id/buttonEdit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Campos del formulario -->
+        <TextView
+            android:id="@+id/labelBookName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NOMBRE LIBRO"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/julius_sans_one_regular"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/editTextBookName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginBottom="16dp"
+            android:padding="10dp"
+            android:hint="Nombre Libro"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="16sp"
+            android:fontFamily="@font/julius_sans_one_regular" />
+
+        <TextView
+            android:id="@+id/labelBookCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CODIGO LIBRO"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/julius_sans_one_regular"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/editTextBookCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginBottom="16dp"
+            android:padding="10dp"
+            android:hint="Código Libro"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="16sp"
+            android:fontFamily="@font/julius_sans_one_regular" />
+
+        <TextView
+            android:id="@+id/labelBookFaculty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FACULTAD LIBRO"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/julius_sans_one_regular"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/editTextBookFaculty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginBottom="16dp"
+            android:padding="10dp"
+            android:hint="Facultad Libro"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="16sp"
+            android:fontFamily="@font/julius_sans_one_regular" />
+
+        <TextView
+            android:id="@+id/labelBookAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AUTOR LIBRO"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/julius_sans_one_regular"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/editTextBookAuthor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginBottom="16dp"
+            android:padding="10dp"
+            android:hint="Autor Libro"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="16sp"
+            android:fontFamily="@font/julius_sans_one_regular" />
+
+        <TextView
+            android:id="@+id/labelBookDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DESCRIPCION LIBRO"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/julius_sans_one_regular"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/editTextBookDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginBottom="16dp"
+            android:padding="10dp"
+            android:hint="Descripción Libro"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="16sp"
+            android:fontFamily="@font/julius_sans_one_regular" />
+
+    </LinearLayout>
+
+    <!-- Botón Añadir -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="  Guardar Cambios  "
+        android:background="@drawable/rounded_button_scn"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/julius_sans_one_regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoBookActivity">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Book Details"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:background="@color/colorPrimario"
+        android:padding="16dp"
+        android:fontFamily="@font/julius_sans_one_regular"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Contenedor de la información del libro -->
+    <LinearLayout
+        android:id="@+id/bookInfoContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        app:layout_constraintBottom_toTopOf="@id/buttonContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/border">
+
+        <!-- Información del libro -->
+
+        <TextView
+            android:id="@+id/bookName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/julius_sans_one_regular"
+            android:text="Nombre: Naruto"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/bookAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Autor: Pablo Escobar"
+            android:fontFamily="@font/julius_sans_one_regular"
+
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/bookCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Código: G212-213123"
+            android:fontFamily="@font/julius_sans_one_regular"
+
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/bookStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estado: Disponible / Prestado"
+            android:fontFamily="@font/julius_sans_one_regular"
+
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/bookBibliography"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bibliografía: not avaible yet"
+            android:fontFamily="@font/julius_sans_one_regular"
+
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/bookReference"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Referencia: not avaible yet"
+            android:fontFamily="@font/julius_sans_one_regular"
+
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="8dp" />
+
+    </LinearLayout>
+
+    <!-- Contenedor de botones -->
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center">
+
+        <!-- Botón Eliminar -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonDelete"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:text="ELIMINAR"
+            android:fontFamily="@font/julius_sans_one_regular"
+
+            android:background="@drawable/rounded_button_scn"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- Botón Editar -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonEdit"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:text="EDITAR"
+            android:fontFamily="@font/julius_sans_one_regular"
+
+            android:background="@drawable/rounded_button_scn"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"/>
+
+        <!-- Botón Prestar -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonLend"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:text="PRESTAMO"
+            android:fontFamily="@font/julius_sans_one_regular"
+
+            android:background="@drawable/rounded_button_scn"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="8dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

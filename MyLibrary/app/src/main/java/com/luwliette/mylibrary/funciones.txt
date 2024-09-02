@@ -1,0 +1,123 @@
+1. onCreate(db: SQLiteDatabase)
+   - Sin parámetros adicionales.
+   - Se utiliza para crear las tablas en la base de datos cuando se crea por primera vez.
+
+2. onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int)
+   - Parámetros:
+     - db: SQLiteDatabase - La base de datos que se está actualizando.
+     - oldVersion: Int - La versión antigua de la base de datos.
+     - newVersion: Int - La nueva versión de la base de datos.
+   - Se utiliza para actualizar la estructura de la base de datos cuando cambia la versión.
+
+3. CreateTables(db: SQLiteDatabase)
+   - Parámetros:
+     - db: SQLiteDatabase - La base de datos donde se crean las tablas.
+   - Se utiliza para crear las tablas necesarias en la base de datos.
+
+4. addAlumno(idNombre: String, idApellido: String, dni: String, codigoEstudiante: String): Long
+   - Parámetros:
+     - idNombre: String - Nombre del alumno.
+     - idApellido: String - Apellido del alumno.
+     - dni: String - DNI del alumno.
+     - codigoEstudiante: String - Código de estudiante del alumno.
+   - Se utiliza para insertar un nuevo alumno en la tabla alumnos.
+
+5. getAllAlumnos(): Cursor
+   - Sin parámetros.
+   - Devuelve un Cursor con todos los registros de la tabla alumnos.
+
+6. updateAlumno(id: Long, idNombre: String, idApellido: String, dni: String, codigoEstudiante: String): Int
+   - Parámetros:
+     - id: Long - ID del alumno a actualizar.
+     - idNombre: String - Nombre actualizado del alumno.
+     - idApellido: String - Apellido actualizado del alumno.
+     - dni: String - DNI actualizado del alumno.
+     - codigoEstudiante: String - Código de estudiante actualizado del alumno.
+   - Actualiza un registro de alumno existente.
+
+7. deleteAlumno(id: Long): Int
+   - Parámetros:
+     - id: Long - ID del alumno a eliminar.
+   - Elimina un registro de alumno de la base de datos.
+
+8. addFacultad(nombreFacultad: String): Long
+   - Parámetros:
+     - nombreFacultad: String - Nombre de la facultad.
+   - Se utiliza para insertar una nueva facultad en la tabla facultad.
+
+9. getAllFacultades(): Cursor
+   - Sin parámetros.
+   - Devuelve un Cursor con todos los registros de la tabla facultad.
+
+10. updateFacultad(id: Long, nombreFacultad: String): Int
+    - Parámetros:
+      - id: Long - ID de la facultad a actualizar.
+      - nombreFacultad: String - Nombre actualizado de la facultad.
+    - Actualiza un registro de facultad existente.
+
+11. deleteFacultad(id: Long): Int
+    - Parámetros:
+      - id: Long - ID de la facultad a eliminar.
+    - Elimina un registro de facultad de la base de datos.
+
+12. addLibro(nombreLibro: String, codigoLibro: String, autorLibro: String, idFacultad: Long, estado: String): Long
+    - Parámetros:
+      - nombreLibro: String - Nombre del libro.
+      - codigoLibro: String - Código del libro.
+      - autorLibro: String - Autor del libro.
+      - idFacultad: Long - ID de la facultad a la que pertenece el libro.
+      - estado: String - Estado del libro.
+    - Se utiliza para insertar un nuevo libro en la tabla libro.
+
+13. getAllLibros(): Cursor
+    - Sin parámetros.
+    - Devuelve un Cursor con todos los registros de la tabla libro.
+
+14. updateLibro(id: Long, nombreLibro: String, codigoLibro: String, autorLibro: String, idFacultad: Long, estado: String): Int
+    - Parámetros:
+      - id: Long - ID del libro a actualizar.
+      - nombreLibro: String - Nombre actualizado del libro.
+      - codigoLibro: String - Código actualizado del libro.
+      - autorLibro: String - Autor actualizado del libro.
+      - idFacultad: Long - ID de la facultad actualizada.
+      - estado: String - Estado actualizado del libro.
+    - Actualiza un registro de libro existente.
+
+15. deleteLibro(id: Long): Int
+    - Parámetros:
+      - id: Long - ID del libro a eliminar.
+    - Elimina un registro de libro de la base de datos.
+
+16. addPrestamo(idAlumno: Long, idLibro: Long, fechaPrestamo: String, fechaDevolucion: String?): Long
+    - Parámetros:
+      - idAlumno: Long - ID del alumno que realiza el préstamo.
+      - idLibro: Long - ID del libro que se presta.
+      - fechaPrestamo: String - Fecha del préstamo.
+      - fechaDevolucion: String? - Fecha de devolución (opcional).
+    - Se utiliza para registrar un nuevo préstamo en la tabla préstamo.
+
+17. getAllPrestamos(): Cursor
+    - Sin parámetros.
+    - Devuelve un Cursor con todos los registros de la tabla préstamo.
+
+18. updatePrestamo(id: Long, idAlumno: Long, idLibro: Long, fechaPrestamo: String, fechaDevolucion: String?): Int
+    - Parámetros:
+      - id: Long - ID del préstamo a actualizar.
+      - idAlumno: Long - ID actualizado del alumno.
+      - idLibro: Long - ID actualizado del libro.
+      - fechaPrestamo: String - Fecha actualizada del préstamo.
+      - fechaDevolucion: String? - Fecha de devolución actualizada.
+    - Actualiza un registro de préstamo existente.
+
+19. deletePrestamo(id: Long): Int
+    - Parámetros:
+      - id: Long - ID del préstamo a eliminar.
+    - Elimina un registro de préstamo de la base de datos.
+
+20. initializeDatasWhitDatabase()
+    - Sin parámetros.
+    - Inicializa la base de datos con datos de ejemplo.
+
+21. initializeDatabase()
+    - Sin parámetros.
+    - Inicializa la base de datos (creación o apertura).
