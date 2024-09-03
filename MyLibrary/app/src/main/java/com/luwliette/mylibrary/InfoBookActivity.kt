@@ -144,8 +144,6 @@ class InfoBookActivity : AppCompatActivity() {
             etReturnDate.isEnabled = false 
             etReturnDate.setText("N/A") 
         } else if (bookEstado == "prestado") {
-            etStudentCode.isEnabled = false 
-            etStudentCode.setText("Ya registrado")
             etLoanDate.isEnabled = false
             etLoanDate.setText("NULL")
         }
